@@ -1,0 +1,2450 @@
+{
+  "health": {
+    "status": "ok",
+    "service": "pramaan-backend",
+    "version": "0.1.0",
+    "environment": "development",
+    "checks": {
+      "database": "ok",
+      "storage": "unavailable"
+    }
+  },
+  "challenges": {
+    "challenges": [
+      {
+        "id": 1,
+        "status": "COMPLETED",
+        "title": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "problem": "Patients at district hospital OPDs wait an average of 42 minutes between registration and consultation. Long waits crowd waiting areas and delay care. The department wants a proven solution before committing to a wider rollout.",
+        "expected_outcome": "A measurable reduction in registration-to-consultation waiting time at two pilot hospitals, verified against criteria fixed before the pilot runs.",
+        "kpi": {
+          "metric": "Average registration-to-consultation waiting time",
+          "baseline_value": 42,
+          "target_value": 25,
+          "target_operator": "lte",
+          "unit": "minutes"
+        },
+        "duration_days": 28,
+        "eligibility_criteria": [
+          {
+            "label": "Recognized startup",
+            "requirement": "Registered startup with valid recognition."
+          },
+          {
+            "label": "Domain fit",
+            "requirement": "Solution directly targets outpatient hospital operations."
+          },
+          {
+            "label": "Deployment capability",
+            "requirement": "Can deploy at two district hospitals within 30 days."
+          },
+          {
+            "label": "Required documentation",
+            "requirement": "Capability evidence and data-safety documentation submitted."
+          }
+        ],
+        "evaluation_dimensions": [
+          "Problem Fit",
+          "Technical Capability",
+          "Implementation Readiness",
+          "Evidence of Capability",
+          "Pilot Feasibility",
+          "Risk"
+        ],
+        "pilot_expectations": "Run the intervention at two district hospital OPDs for four weeks. Report the average registration-to-consultation waiting time every week and submit timestamped sampling logs as evidence.",
+        "evidence_requirements": [
+          {
+            "label": "Weekly sampling logs",
+            "requirement": "Timestamped registration-to-consultation records, aggregated per week per site."
+          },
+          {
+            "label": "Deployment report",
+            "requirement": "Sites, go-live dates, and configuration summary."
+          },
+          {
+            "label": "Data safety note",
+            "requirement": "De-identification and retention approach for patient timestamps."
+          }
+        ],
+        "tags": [
+          "health",
+          "outpatient",
+          "waiting_time"
+        ],
+        "department": {
+          "id": 1,
+          "name": "Health and Family Welfare Department, Government of Karnataka",
+          "short_name": "KHFW",
+          "description": "Operates district and taluk hospitals across Karnataka. Runs the challenge to cut outpatient waiting times through a competitive pilot."
+        },
+        "created_at": "2026-09-03T20:07:11",
+        "pilots": [
+          {
+            "id": 1,
+            "status": "VERDICTED",
+            "startup_id": 1,
+            "startup": "Pravaah Health Systems",
+            "challenge_id": 1,
+            "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+            "department": "KHFW",
+            "protocol_status": "SEALED",
+            "created_at": "2026-09-03T20:07:11"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "status": "OPEN",
+        "title": "Reduce waiting time at Karnataka One citizen service centres",
+        "problem": "Citizens queue at Karnataka One counters for certificates and service requests. Average counter waiting time is 38 minutes and peaks disrupt the working day. The department wants verified evidence before scaling any queue-management intervention.",
+        "expected_outcome": "A decision on how to act: reuse verified evidence from a similar departmental pilot or run a short confirmatory pilot.",
+        "kpi": {
+          "metric": "Average counter waiting time (token to service start)",
+          "baseline_value": 38,
+          "target_value": 25,
+          "target_operator": "lte",
+          "unit": "minutes"
+        },
+        "duration_days": 14,
+        "eligibility_criteria": [],
+        "evaluation_dimensions": [],
+        "pilot_expectations": "",
+        "evidence_requirements": [],
+        "tags": [
+          "citizen_services",
+          "waiting_time",
+          "service_delivery"
+        ],
+        "department": {
+          "id": 2,
+          "name": "Department of e-Governance, Government of Karnataka",
+          "short_name": "Karnataka One",
+          "description": "Operates Karnataka One citizen service centres that issue certificates and process citizen requests at the counter."
+        },
+        "created_at": "2026-09-03T20:07:11",
+        "pilots": []
+      }
+    ]
+  },
+  "challengesById": {
+    "1": {
+      "id": 1,
+      "status": "COMPLETED",
+      "title": "Reduce outpatient waiting time at Karnataka district hospitals",
+      "problem": "Patients at district hospital OPDs wait an average of 42 minutes between registration and consultation. Long waits crowd waiting areas and delay care. The department wants a proven solution before committing to a wider rollout.",
+      "expected_outcome": "A measurable reduction in registration-to-consultation waiting time at two pilot hospitals, verified against criteria fixed before the pilot runs.",
+      "kpi": {
+        "metric": "Average registration-to-consultation waiting time",
+        "baseline_value": 42,
+        "target_value": 25,
+        "target_operator": "lte",
+        "unit": "minutes"
+      },
+      "duration_days": 28,
+      "eligibility_criteria": [
+        {
+          "label": "Recognized startup",
+          "requirement": "Registered startup with valid recognition."
+        },
+        {
+          "label": "Domain fit",
+          "requirement": "Solution directly targets outpatient hospital operations."
+        },
+        {
+          "label": "Deployment capability",
+          "requirement": "Can deploy at two district hospitals within 30 days."
+        },
+        {
+          "label": "Required documentation",
+          "requirement": "Capability evidence and data-safety documentation submitted."
+        }
+      ],
+      "evaluation_dimensions": [
+        "Problem Fit",
+        "Technical Capability",
+        "Implementation Readiness",
+        "Evidence of Capability",
+        "Pilot Feasibility",
+        "Risk"
+      ],
+      "pilot_expectations": "Run the intervention at two district hospital OPDs for four weeks. Report the average registration-to-consultation waiting time every week and submit timestamped sampling logs as evidence.",
+      "evidence_requirements": [
+        {
+          "label": "Weekly sampling logs",
+          "requirement": "Timestamped registration-to-consultation records, aggregated per week per site."
+        },
+        {
+          "label": "Deployment report",
+          "requirement": "Sites, go-live dates, and configuration summary."
+        },
+        {
+          "label": "Data safety note",
+          "requirement": "De-identification and retention approach for patient timestamps."
+        }
+      ],
+      "tags": [
+        "health",
+        "outpatient",
+        "waiting_time"
+      ],
+      "department": {
+        "id": 1,
+        "name": "Health and Family Welfare Department, Government of Karnataka",
+        "short_name": "KHFW",
+        "description": "Operates district and taluk hospitals across Karnataka. Runs the challenge to cut outpatient waiting times through a competitive pilot."
+      },
+      "created_at": "2026-09-03T20:07:11",
+      "pilots": [
+        {
+          "id": 1,
+          "status": "VERDICTED",
+          "startup_id": 1,
+          "startup": "Pravaah Health Systems",
+          "challenge_id": 1,
+          "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "department": "KHFW",
+          "protocol_status": "SEALED",
+          "created_at": "2026-09-03T20:07:11"
+        }
+      ],
+      "applications": [
+        {
+          "id": 1,
+          "status": "SELECTED",
+          "proposal": "Deploy the queue orchestration stack at two district hospital OPDs. Rebalance registration counters from live queue data and publish weekly registration-to-consultation aggregates through the PRAMAAN pilot interface.",
+          "submitted_on": "2026-06-03",
+          "eligibility": {
+            "eligible": true,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": true,
+                "detail": "Prior deployments at two Karnataka secondary-care hospitals."
+              },
+              {
+                "check": "Required documentation",
+                "met": true,
+                "detail": "Capability deck, data-safety note, and team credentials submitted."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [
+            {
+              "id": 1,
+              "evaluator_name": "Dr. Meera Krishnan",
+              "evaluator_role": "Public health systems specialist, evaluation panel",
+              "score": 4.7,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 5,
+                  "note": "Directly targets the registration-to-consultation bottleneck and understands OPD flow."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4.5,
+                  "note": "Mature queue orchestration stack with an API-based reporting path."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 4.5,
+                  "note": "Team has run two similar hospital rollouts; 30-day plan is credible."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 5,
+                  "note": "Reference sites show measured wait reduction from 45 to 26 minutes."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4.5,
+                  "note": "Two-hospital scope fits team capacity; on-site support offered."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 4.5,
+                  "note": "Clear operational and data mitigations; rollback plan defined."
+                }
+              ],
+              "summary": "Strongest overall fit. Prior public-hospital results give the panel confidence the pilot target is reachable in four weeks.",
+              "evaluated_on": "2026-06-12"
+            },
+            {
+              "id": 2,
+              "evaluator_name": "R. Srinivasan",
+              "evaluator_role": "Director, e-Governance cell, evaluation panel",
+              "score": 4.5,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4.5,
+                  "note": "Good match; proposal focuses on the measured KPI."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4.5,
+                  "note": "Proven integration pattern with hospital systems."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 4.5,
+                  "note": "Named on-site team and two-week deployment plan."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 4.5,
+                  "note": "Verifiable reference hospitals with reported metrics."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4.5,
+                  "note": "Scope achievable within four weeks."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 4.5,
+                  "note": "Risks identified with assigned mitigations."
+                }
+              ],
+              "summary": "Strong technical readiness and credible evidence base.",
+              "evaluated_on": "2026-06-12"
+            }
+          ],
+          "startup": {
+            "id": 1,
+            "name": "Pravaah Health Systems",
+            "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+            "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+            "sector": "Health technology",
+            "city": "Bengaluru"
+          }
+        },
+        {
+          "id": 2,
+          "status": "NOT_SELECTED",
+          "proposal": "Bring token-based queuing and analytics to OPD registration. Proposes a 45-day ramp at two hospitals.",
+          "submitted_on": "2026-06-04",
+          "eligibility": {
+            "eligible": true,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": true,
+                "detail": "Operates at service counters in the private sector; hospital deployment not yet demonstrated."
+              },
+              {
+                "check": "Required documentation",
+                "met": true,
+                "detail": "Documentation submitted; references are non-hospital counters."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [
+            {
+              "id": 3,
+              "evaluator_name": "Dr. Meera Krishnan",
+              "evaluator_role": "Public health systems specialist, evaluation panel",
+              "score": 3.8,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4,
+                  "note": "Relevant queuing model, generic to service counters."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4,
+                  "note": "Solid token platform; hospital integration unproven."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 3.5,
+                  "note": "No health facility deployment; ramp plan is longer."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 3,
+                  "note": "References are malls and offices, not hospitals."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4,
+                  "note": "Feasible if hospital connectivity is resolved early."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 3.5,
+                  "note": "No existing data-handling agreement with public hospitals."
+                }
+              ],
+              "summary": "Capable queuing vendor; evidence base is not health-specific.",
+              "evaluated_on": "2026-06-12"
+            },
+            {
+              "id": 4,
+              "evaluator_name": "R. Srinivasan",
+              "evaluator_role": "Director, e-Governance cell, evaluation panel",
+              "score": 3.6,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4,
+                  "note": "Addresses wait reduction generally."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4,
+                  "note": "Analytics are strong; OPD integration unproven."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 3.5,
+                  "note": "Longer ramp and fewer named hospital resources."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 3,
+                  "note": "No public-sector health references."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 3.5,
+                  "note": "Dependent on early connectivity approval."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 3.5,
+                  "note": "Integration and data-handling unknowns."
+                }
+              ],
+              "summary": "Mid-ranking proposal; gap in health-sector evidence.",
+              "evaluated_on": "2026-06-12"
+            }
+          ],
+          "startup": {
+            "id": 2,
+            "name": "QueTek Solutions",
+            "tagline": "Digital token and queue analytics for high-volume service counters",
+            "description": "QueTek operates token and queue analytics for service counters in the private sector. Strong queuing model, but no published health-facility deployment and no data-handling agreement with a public hospital yet.",
+            "sector": "Queue analytics",
+            "city": "Mysuru"
+          }
+        },
+        {
+          "id": 3,
+          "status": "INELIGIBLE",
+          "proposal": "Sensor-based footfall sensing and staff scheduling for OPD registration areas.",
+          "submitted_on": "2026-06-05",
+          "eligibility": {
+            "eligible": false,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": false,
+                "detail": "No health-sector deployment; proposed timeline of 45 days exceeds the published 30-day window."
+              },
+              {
+                "check": "Required documentation",
+                "met": false,
+                "detail": "Data-safety documentation was not submitted at screening close."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [],
+          "startup": {
+            "id": 3,
+            "name": "FlowGrid Labs",
+            "tagline": "Footfall sensing and scheduling platform",
+            "description": "FlowGrid provides sensor-based footfall sensing and staff scheduling for commercial venues. Applied for the health challenge but could not demonstrate health-sector deployment or submit the required data-safety documentation.",
+            "sector": "Workforce scheduling",
+            "city": "Hubballi"
+          }
+        }
+      ],
+      "reuse_discovery": [],
+      "reuse_decisions": []
+    },
+    "2": {
+      "id": 2,
+      "status": "OPEN",
+      "title": "Reduce waiting time at Karnataka One citizen service centres",
+      "problem": "Citizens queue at Karnataka One counters for certificates and service requests. Average counter waiting time is 38 minutes and peaks disrupt the working day. The department wants verified evidence before scaling any queue-management intervention.",
+      "expected_outcome": "A decision on how to act: reuse verified evidence from a similar departmental pilot or run a short confirmatory pilot.",
+      "kpi": {
+        "metric": "Average counter waiting time (token to service start)",
+        "baseline_value": 38,
+        "target_value": 25,
+        "target_operator": "lte",
+        "unit": "minutes"
+      },
+      "duration_days": 14,
+      "eligibility_criteria": [],
+      "evaluation_dimensions": [],
+      "pilot_expectations": "",
+      "evidence_requirements": [],
+      "tags": [
+        "citizen_services",
+        "waiting_time",
+        "service_delivery"
+      ],
+      "department": {
+        "id": 2,
+        "name": "Department of e-Governance, Government of Karnataka",
+        "short_name": "Karnataka One",
+        "description": "Operates Karnataka One citizen service centres that issue certificates and process citizen requests at the counter."
+      },
+      "created_at": "2026-09-03T20:07:11",
+      "pilots": [],
+      "applications": [],
+      "reuse_discovery": [
+        {
+          "vpr_id": 1,
+          "reference": "VPR/2026/KHFW-001",
+          "issued_at": "2026-07-24T10:00:00",
+          "source_department": "Health and Family Welfare Department, Government of Karnataka",
+          "source_challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "startup_id": 1,
+          "startup": "Pravaah Health Systems",
+          "metric": "Average registration-to-consultation waiting time",
+          "target_operator": "lte",
+          "target_value": 25,
+          "unit": "minutes",
+          "observed_value": 24,
+          "outcome": "MET",
+          "shared_tags": [
+            "waiting_time"
+          ],
+          "evidence_count": 4,
+          "evidence_verified": true,
+          "validated_by": "Dr. Anita Rao (Independent Evaluator)"
+        }
+      ],
+      "reuse_decisions": []
+    }
+  },
+  "pilotsById": {
+    "1": {
+      "id": 1,
+      "status": "VERDICTED",
+      "scope": "Pravaah queue orchestration at two district hospital OPDs (Bengaluru and Tumakuru), four weekly measurement periods, 28-day window.",
+      "started_at": "2026-06-22T09:00:00",
+      "completed_at": "2026-07-22T10:00:00",
+      "challenge": {
+        "id": 1,
+        "status": "COMPLETED",
+        "title": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "problem": "Patients at district hospital OPDs wait an average of 42 minutes between registration and consultation. Long waits crowd waiting areas and delay care. The department wants a proven solution before committing to a wider rollout.",
+        "expected_outcome": "A measurable reduction in registration-to-consultation waiting time at two pilot hospitals, verified against criteria fixed before the pilot runs.",
+        "kpi": {
+          "metric": "Average registration-to-consultation waiting time",
+          "baseline_value": 42,
+          "target_value": 25,
+          "target_operator": "lte",
+          "unit": "minutes"
+        },
+        "duration_days": 28,
+        "eligibility_criteria": [
+          {
+            "label": "Recognized startup",
+            "requirement": "Registered startup with valid recognition."
+          },
+          {
+            "label": "Domain fit",
+            "requirement": "Solution directly targets outpatient hospital operations."
+          },
+          {
+            "label": "Deployment capability",
+            "requirement": "Can deploy at two district hospitals within 30 days."
+          },
+          {
+            "label": "Required documentation",
+            "requirement": "Capability evidence and data-safety documentation submitted."
+          }
+        ],
+        "evaluation_dimensions": [
+          "Problem Fit",
+          "Technical Capability",
+          "Implementation Readiness",
+          "Evidence of Capability",
+          "Pilot Feasibility",
+          "Risk"
+        ],
+        "pilot_expectations": "Run the intervention at two district hospital OPDs for four weeks. Report the average registration-to-consultation waiting time every week and submit timestamped sampling logs as evidence.",
+        "evidence_requirements": [
+          {
+            "label": "Weekly sampling logs",
+            "requirement": "Timestamped registration-to-consultation records, aggregated per week per site."
+          },
+          {
+            "label": "Deployment report",
+            "requirement": "Sites, go-live dates, and configuration summary."
+          },
+          {
+            "label": "Data safety note",
+            "requirement": "De-identification and retention approach for patient timestamps."
+          }
+        ],
+        "tags": [
+          "health",
+          "outpatient",
+          "waiting_time"
+        ],
+        "department": {
+          "id": 1,
+          "name": "Health and Family Welfare Department, Government of Karnataka",
+          "short_name": "KHFW",
+          "description": "Operates district and taluk hospitals across Karnataka. Runs the challenge to cut outpatient waiting times through a competitive pilot."
+        },
+        "created_at": "2026-09-03T20:07:11",
+        "pilots": [
+          {
+            "id": 1,
+            "status": "VERDICTED",
+            "startup_id": 1,
+            "startup": "Pravaah Health Systems",
+            "challenge_id": 1,
+            "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+            "department": "KHFW",
+            "protocol_status": "SEALED",
+            "created_at": "2026-09-03T20:07:11"
+          }
+        ]
+      },
+      "startup": {
+        "id": 1,
+        "name": "Pravaah Health Systems",
+        "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+        "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+        "sector": "Health technology",
+        "city": "Bengaluru"
+      },
+      "protocols": [
+        {
+          "id": 1,
+          "version": 1,
+          "status": "SEALED",
+          "metric": "Average registration-to-consultation waiting time",
+          "target_operator": "lte",
+          "target_value": 25,
+          "unit": "minutes",
+          "baseline_value": 42,
+          "duration_days": 28,
+          "sample_interval": "weekly",
+          "measurement_method": "Pilot sites compute the average registration-to-consultation wait time each week from timestamped registration and consultation records, and submit the weekly sample through the pilot reporting interface.",
+          "success_rule": "The pilot succeeds when the average registration-to-consultation waiting time is <= 25 minutes across the measured weekly periods.",
+          "content_hash": "8e95e403865d15e3995ef63a2c0d6e272416b3862262ea21153785ec2b808468",
+          "sealed_by": "Department evaluation cell",
+          "sealed_at": "2026-06-17T09:30:00",
+          "created_at": "2026-09-03T20:07:11",
+          "updated_at": "2026-09-03T20:07:12"
+        }
+      ],
+      "current_protocol": {
+        "id": 1,
+        "version": 1,
+        "status": "SEALED",
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target_value": 25,
+        "unit": "minutes",
+        "baseline_value": 42,
+        "duration_days": 28,
+        "sample_interval": "weekly",
+        "measurement_method": "Pilot sites compute the average registration-to-consultation wait time each week from timestamped registration and consultation records, and submit the weekly sample through the pilot reporting interface.",
+        "success_rule": "The pilot succeeds when the average registration-to-consultation waiting time is <= 25 minutes across the measured weekly periods.",
+        "content_hash": "8e95e403865d15e3995ef63a2c0d6e272416b3862262ea21153785ec2b808468",
+        "sealed_by": "Department evaluation cell",
+        "sealed_at": "2026-06-17T09:30:00",
+        "created_at": "2026-09-03T20:07:11",
+        "updated_at": "2026-09-03T20:07:12"
+      },
+      "sealed_protocol": {
+        "id": 1,
+        "version": 1,
+        "status": "SEALED",
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target_value": 25,
+        "unit": "minutes",
+        "baseline_value": 42,
+        "duration_days": 28,
+        "sample_interval": "weekly",
+        "measurement_method": "Pilot sites compute the average registration-to-consultation wait time each week from timestamped registration and consultation records, and submit the weekly sample through the pilot reporting interface.",
+        "success_rule": "The pilot succeeds when the average registration-to-consultation waiting time is <= 25 minutes across the measured weekly periods.",
+        "content_hash": "8e95e403865d15e3995ef63a2c0d6e272416b3862262ea21153785ec2b808468",
+        "sealed_by": "Department evaluation cell",
+        "sealed_at": "2026-06-17T09:30:00",
+        "created_at": "2026-09-03T20:07:11",
+        "updated_at": "2026-09-03T20:07:12"
+      },
+      "milestones": [
+        {
+          "seq": 1,
+          "title": "Setup and baseline",
+          "description": "Deployment at pilot sites, go-live, and baseline measurement of the KPI before the intervention ramps up.",
+          "amount": "100,000",
+          "amount_raw": 100000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Setup and baseline. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 2,
+          "title": "Initial measurement period",
+          "description": "Weekly KPI samples recorded during the first half of the pilot window.",
+          "amount": "200,000",
+          "amount_raw": 200000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Initial measurement period. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 3,
+          "title": "Target performance period",
+          "description": "Weekly KPI samples recorded during the second half of the pilot window.",
+          "amount": "300,000",
+          "amount_raw": 300000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Target performance period. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 4,
+          "title": "Final evaluation and reporting",
+          "description": "Close-out analysis, complete evidence package, and independent validation review.",
+          "amount": "400,000",
+          "amount_raw": 400000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Completed at 24 Jul 2026, 10:00 UTC."
+        }
+      ],
+      "risks": [
+        {
+          "id": 1,
+          "category": "Operational disruption",
+          "description": "Daily OPD flow could be disturbed by new queue software at live counters.",
+          "mitigation": "Phased rollout per counter group; rollback plan; pilot runs in parallel with manual fallback registration.",
+          "status": "MITIGATED"
+        },
+        {
+          "id": 2,
+          "category": "Data privacy",
+          "description": "Patient registration timestamps are personal data under DPDP rules.",
+          "mitigation": "Sampling extracts are de-identified; only aggregate wait times leave the hospital; access logged.",
+          "status": "MITIGATED"
+        },
+        {
+          "id": 3,
+          "category": "Cybersecurity",
+          "description": "A third-party system connects to hospital network services.",
+          "mitigation": "Sandboxed environment, no production data writes, vendor audit, and connectivity only to the reporting API.",
+          "status": "MONITORED"
+        },
+        {
+          "id": 4,
+          "category": "Service continuity",
+          "description": "A software fault must never block a patient from being registered.",
+          "mitigation": "Manual registration remains available at all times; uptime and fallback exercised weekly.",
+          "status": "MITIGATED"
+        }
+      ],
+      "measurements": [
+        {
+          "id": 1,
+          "label": "Week 1",
+          "value": 31,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-06-29"
+        },
+        {
+          "id": 2,
+          "label": "Week 2",
+          "value": 26,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-06"
+        },
+        {
+          "id": 3,
+          "label": "Week 3",
+          "value": 21,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-13"
+        },
+        {
+          "id": 4,
+          "label": "Week 4",
+          "value": 18,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-20"
+        }
+      ],
+      "evidence": [
+        {
+          "id": 1,
+          "kind": "ops_report",
+          "title": "Week 1 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 1 KPI value of 31 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-06-29",
+          "filename": "week_1_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "9f4e26d26d68698eb95a44a1351e6f8ced11c874620e21d8a3216ba5e40b2787",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:14",
+          "measurement_id": 1,
+          "measurement_label": "Week 1",
+          "latest_check": {
+            "id": 1,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:14"
+          },
+          "checks": [
+            {
+              "id": 1,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:14"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "kind": "ops_report",
+          "title": "Week 2 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 2 KPI value of 26 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-06",
+          "filename": "week_2_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "4f04e2e0638cf595a4f60a75b71e04d93b27805a2608b3ad5baab88824d2a47f",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:16",
+          "measurement_id": 2,
+          "measurement_label": "Week 2",
+          "latest_check": {
+            "id": 2,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:16"
+          },
+          "checks": [
+            {
+              "id": 2,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:16"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "kind": "ops_report",
+          "title": "Week 3 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 3 KPI value of 21 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-13",
+          "filename": "week_3_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "da22ab1ae88a4b4f2f876f380908c6186422ad090984ad30c5e084a0bc3132bd",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:18",
+          "measurement_id": 3,
+          "measurement_label": "Week 3",
+          "latest_check": {
+            "id": 3,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:18"
+          },
+          "checks": [
+            {
+              "id": 3,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:18"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "kind": "ops_report",
+          "title": "Week 4 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 4 KPI value of 18 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-20",
+          "filename": "week_4_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "fa13335033f4d3e7c63663abfa26e36a36f087e72d827fb3777e2aeed42994ee",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:20",
+          "measurement_id": 4,
+          "measurement_label": "Week 4",
+          "latest_check": {
+            "id": 4,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:20"
+          },
+          "checks": [
+            {
+              "id": 4,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:20"
+            }
+          ]
+        }
+      ],
+      "validations": [
+        {
+          "id": 1,
+          "validator_name": "Dr. Anita Rao (Independent Evaluator)",
+          "status": "APPROVED",
+          "notes": "Independent cross-check of weekly sampling logs against counter registers at both pilot sites. Reported aggregates match source records; evidence integrity verified. Approved.",
+          "decided_at": "2026-07-22T11:00:00",
+          "created_at": "2026-09-03T20:07:20"
+        }
+      ],
+      "audit": [
+        {
+          "id": 1,
+          "kind": "state",
+          "summary": "Pilot selected for Pravaah Health Systems after competitive evaluation.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-15T10:00:00",
+          "content_hash": "cbb10063f6a3adb0d3c89e59491e73840a804d3f15c4ee5bfc07cd01bd06335a",
+          "prev_hash": null
+        },
+        {
+          "id": 2,
+          "kind": "protocol",
+          "summary": "Evaluation protocol v1 approved by the department for sealing.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-16T14:00:00",
+          "content_hash": "da946b29a15cffdf450bd1de8febc1005cfec65648d50975f0de3a2e3d2be11b",
+          "prev_hash": "cbb10063f6a3adb0d3c89e59491e73840a804d3f15c4ee5bfc07cd01bd06335a"
+        },
+        {
+          "id": 3,
+          "kind": "protocol",
+          "summary": "Evaluation criteria locked (protocol v1, SHA-256 8e95e403865d) before the pilot started.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-17T09:30:00",
+          "content_hash": "e45b27bf1bc04bc2d5f9919685c9fafde8a26e0bfa6c9b249fd3d8c287177a4f",
+          "prev_hash": "da946b29a15cffdf450bd1de8febc1005cfec65648d50975f0de3a2e3d2be11b"
+        },
+        {
+          "id": 4,
+          "kind": "state",
+          "summary": "Milestone 1: Setup and baseline completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-06-22T09:00:00",
+          "content_hash": "d47569d77390c8fa020fc256f779f02d83451d20c45bdcf231c735a96384f55b",
+          "prev_hash": "e45b27bf1bc04bc2d5f9919685c9fafde8a26e0bfa6c9b249fd3d8c287177a4f"
+        },
+        {
+          "id": 5,
+          "kind": "state",
+          "summary": "Pilot started at the pilot sites. Milestone 1 (setup and baseline) completed.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-22T09:00:00",
+          "content_hash": "7ce46190c64b20dd96efcb087d27163c83bfe21488197801dd2161fde3991dc3",
+          "prev_hash": "d47569d77390c8fa020fc256f779f02d83451d20c45bdcf231c735a96384f55b"
+        },
+        {
+          "id": 6,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 1 31 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "02595038e5e82129116187d151ddaa489c0d2efa5055e9046c62c83b13e4f436",
+          "prev_hash": "7ce46190c64b20dd96efcb087d27163c83bfe21488197801dd2161fde3991dc3"
+        },
+        {
+          "id": 7,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 1 KPI sampling log (week_1_sampling_log.txt, SHA-256 9f4e26d26d68, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "cf8061e66d7554f65cc3dc30651d3ed6cd6c11008acfe19d0480903caac1d0f6",
+          "prev_hash": "02595038e5e82129116187d151ddaa489c0d2efa5055e9046c62c83b13e4f436"
+        },
+        {
+          "id": 8,
+          "kind": "state",
+          "summary": "Milestone 2: Initial measurement period completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "8eb2caccdabd8221cf5090edf17b1e3286c3064adf3106e3f8a6e4301199e38e",
+          "prev_hash": "cf8061e66d7554f65cc3dc30651d3ed6cd6c11008acfe19d0480903caac1d0f6"
+        },
+        {
+          "id": 9,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 2 26 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "7e8cb237ed2f65c3822ab2775003a4b1880d6eaabdb560c5336444316cc29850",
+          "prev_hash": "8eb2caccdabd8221cf5090edf17b1e3286c3064adf3106e3f8a6e4301199e38e"
+        },
+        {
+          "id": 10,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 2 KPI sampling log (week_2_sampling_log.txt, SHA-256 4f04e2e0638c, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "c98fde9aa8b450c9e26794771daccfe0aa58ce05f272ef1a77369544d99d8d65",
+          "prev_hash": "7e8cb237ed2f65c3822ab2775003a4b1880d6eaabdb560c5336444316cc29850"
+        },
+        {
+          "id": 11,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 3 21 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "bb695d2ee6641c1bf92061b82564cf397d25cf52ad5df5a72f5f53fa3f5f5583",
+          "prev_hash": "c98fde9aa8b450c9e26794771daccfe0aa58ce05f272ef1a77369544d99d8d65"
+        },
+        {
+          "id": 12,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 3 KPI sampling log (week_3_sampling_log.txt, SHA-256 da22ab1ae88a, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "95d1dee7665890b39b1d1fef9cc82c1fb4da2393775afabf868fd35a966aa72e",
+          "prev_hash": "bb695d2ee6641c1bf92061b82564cf397d25cf52ad5df5a72f5f53fa3f5f5583"
+        },
+        {
+          "id": 13,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 4 18 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "6594a8578da4a07b256d4208900013cc0db9d031eaf914ba0f36e64eaae39443",
+          "prev_hash": "95d1dee7665890b39b1d1fef9cc82c1fb4da2393775afabf868fd35a966aa72e"
+        },
+        {
+          "id": 14,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 4 KPI sampling log (week_4_sampling_log.txt, SHA-256 fa13335033f4, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "7eba9226a7da6ddd025921eb0a3aa09be7992b3c067c464d5f02e8cdcbb007dd",
+          "prev_hash": "6594a8578da4a07b256d4208900013cc0db9d031eaf914ba0f36e64eaae39443"
+        },
+        {
+          "id": 15,
+          "kind": "state",
+          "summary": "Milestone 3: Target performance period completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "30163a6bc5fbf1f3750159940d9e3f525659fc9246f073238720ffaeb16511c6",
+          "prev_hash": "7eba9226a7da6ddd025921eb0a3aa09be7992b3c067c464d5f02e8cdcbb007dd"
+        },
+        {
+          "id": 16,
+          "kind": "state",
+          "summary": "Measurement window closed. The pilot is ready for evidence verification and independent validation.",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "c997b7443fbd80d289a48a89451720a16bf8def734bd3b5eba8907756df39159",
+          "prev_hash": "30163a6bc5fbf1f3750159940d9e3f525659fc9246f073238720ffaeb16511c6"
+        },
+        {
+          "id": 17,
+          "kind": "validation",
+          "summary": "Independent validation opened for review by Dr. Anita Rao (Independent Evaluator).",
+          "actor": "Independent evaluation unit",
+          "occurred_at": "2026-07-21T11:00:00",
+          "content_hash": "74e398d72b0ba2d2f9dbd940fcc1876c7c3b5a75556a24abeb5e7bf6fa196e84",
+          "prev_hash": "c997b7443fbd80d289a48a89451720a16bf8def734bd3b5eba8907756df39159"
+        },
+        {
+          "id": 18,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 1: Setup and baseline.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "3c461b3f042c6619f5218f74084a36f95809490cce6bae30f28c29cc80fd54c6",
+          "prev_hash": "74e398d72b0ba2d2f9dbd940fcc1876c7c3b5a75556a24abeb5e7bf6fa196e84"
+        },
+        {
+          "id": 19,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 2: Initial measurement period.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "af3cba79995945a992a0863a5f59d06c7aa5065555b802a6031b3181d13484b7",
+          "prev_hash": "3c461b3f042c6619f5218f74084a36f95809490cce6bae30f28c29cc80fd54c6"
+        },
+        {
+          "id": 20,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 3: Target performance period.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "f2a26983e8578e3bf0b643f3d510e773cfbbfef4fd4659efb9563225c2034b9a",
+          "prev_hash": "af3cba79995945a992a0863a5f59d06c7aa5065555b802a6031b3181d13484b7"
+        },
+        {
+          "id": 21,
+          "kind": "validation",
+          "summary": "Independent validator Dr. Anita Rao (Independent Evaluator) approved the pilot result and evidence.",
+          "actor": "Dr. Anita Rao (Independent Evaluator)",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "fe5137298f261aa19ee2dc7201d5425deaafcb60cd69a24ffcf006562a51fd85",
+          "prev_hash": "f2a26983e8578e3bf0b643f3d510e773cfbbfef4fd4659efb9563225c2034b9a"
+        },
+        {
+          "id": 22,
+          "kind": "state",
+          "summary": "Milestone 4: Final evaluation and reporting completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "3a74bc933836e63d6f03b5af5620bf9f5275656bd2affeb348aaa9bf451fe696",
+          "prev_hash": "fe5137298f261aa19ee2dc7201d5425deaafcb60cd69a24ffcf006562a51fd85"
+        },
+        {
+          "id": 23,
+          "kind": "verdict",
+          "summary": "Deterministic verdict issued: MET (observed 24, target <= 25 minutes, protocol v1).",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "2796d09f9c08f953c390320f807837480780a57e0fde5e36e9e8321868c9049b",
+          "prev_hash": "3a74bc933836e63d6f03b5af5620bf9f5275656bd2affeb348aaa9bf451fe696"
+        },
+        {
+          "id": 24,
+          "kind": "state",
+          "summary": "Scale recommendation recorded: SCALE_UP_RECOMMENDED.",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "d4d2eaab93bc98e8e90a20151b6044cf5e73d37f3386a710723d156df01681d1",
+          "prev_hash": "2796d09f9c08f953c390320f807837480780a57e0fde5e36e9e8321868c9049b"
+        },
+        {
+          "id": 25,
+          "kind": "state",
+          "summary": "Verified Pilot Record VPR/2026/KHFW-001 issued.",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "1bb950909c785a7b3e07da34c2c9f1b6dea68e9b11764548c598ea872ee32c82",
+          "prev_hash": "d4d2eaab93bc98e8e90a20151b6044cf5e73d37f3386a710723d156df01681d1"
+        }
+      ],
+      "verdict": {
+        "id": 1,
+        "protocol_version": 1,
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target_value": 25,
+        "unit": "minutes",
+        "observed_value": 24,
+        "sample_count": 4,
+        "method": "Mean of 4 weekly samples; target <= 25 minutes.",
+        "outcome": "MET",
+        "issued_by": "Health and Family Welfare Department, Government of Karnataka",
+        "issued_at": "2026-07-24T10:00:00"
+      },
+      "scale": {
+        "outcome": "SCALE_UP_RECOMMENDED",
+        "basis": "Pilot outcome MET (24 minutes vs target <= 25), evidence integrity verified, independent validation approved. This is a recommendation to the department; procurement authority remains with the government.",
+        "decided_by": "Health and Family Welfare Department, Government of Karnataka",
+        "decided_at": "2026-07-24T10:00:00"
+      },
+      "vpr": {
+        "id": 1,
+        "reference": "VPR/2026/KHFW-001",
+        "status": "ACTIVE",
+        "summary": "Health and Family Welfare Department, Government of Karnataka tested Pravaah Health Systems against a sealed evaluation protocol for Average registration-to-consultation waiting time (target <= 25 minutes). Observed average 24 minutes over 4 weekly samples. Verdict: MET. Evidence verified, validation approved.",
+        "issued_at": "2026-07-24T10:00:00"
+      },
+      "result": {
+        "protocol_version": 1,
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target": 25,
+        "unit": "minutes",
+        "sample_count": 4,
+        "observed_value": 24,
+        "met": true,
+        "method": "Mean of 4 weekly samples; target <= 25 minutes."
+      }
+    }
+  },
+  "startups": {
+    "startups": [
+      {
+        "id": 1,
+        "name": "Pravaah Health Systems",
+        "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+        "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+        "sector": "Health technology",
+        "city": "Bengaluru",
+        "applications": [
+          {
+            "id": 1,
+            "challenge_id": 1,
+            "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+            "department": "KHFW",
+            "status": "SELECTED",
+            "submitted_on": "2026-06-03"
+          }
+        ],
+        "wins": 1
+      },
+      {
+        "id": 2,
+        "name": "QueTek Solutions",
+        "tagline": "Digital token and queue analytics for high-volume service counters",
+        "description": "QueTek operates token and queue analytics for service counters in the private sector. Strong queuing model, but no published health-facility deployment and no data-handling agreement with a public hospital yet.",
+        "sector": "Queue analytics",
+        "city": "Mysuru",
+        "applications": [
+          {
+            "id": 2,
+            "challenge_id": 1,
+            "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+            "department": "KHFW",
+            "status": "NOT_SELECTED",
+            "submitted_on": "2026-06-04"
+          }
+        ],
+        "wins": 0
+      },
+      {
+        "id": 3,
+        "name": "FlowGrid Labs",
+        "tagline": "Footfall sensing and scheduling platform",
+        "description": "FlowGrid provides sensor-based footfall sensing and staff scheduling for commercial venues. Applied for the health challenge but could not demonstrate health-sector deployment or submit the required data-safety documentation.",
+        "sector": "Workforce scheduling",
+        "city": "Hubballi",
+        "applications": [
+          {
+            "id": 3,
+            "challenge_id": 1,
+            "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+            "department": "KHFW",
+            "status": "INELIGIBLE",
+            "submitted_on": "2026-06-05"
+          }
+        ],
+        "wins": 0
+      }
+    ]
+  },
+  "startupsById": {
+    "1": {
+      "startup": {
+        "id": 1,
+        "name": "Pravaah Health Systems",
+        "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+        "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+        "sector": "Health technology",
+        "city": "Bengaluru"
+      },
+      "applications": [
+        {
+          "id": 1,
+          "status": "SELECTED",
+          "proposal": "Deploy the queue orchestration stack at two district hospital OPDs. Rebalance registration counters from live queue data and publish weekly registration-to-consultation aggregates through the PRAMAAN pilot interface.",
+          "submitted_on": "2026-06-03",
+          "eligibility": {
+            "eligible": true,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": true,
+                "detail": "Prior deployments at two Karnataka secondary-care hospitals."
+              },
+              {
+                "check": "Required documentation",
+                "met": true,
+                "detail": "Capability deck, data-safety note, and team credentials submitted."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [
+            {
+              "id": 1,
+              "evaluator_name": "Dr. Meera Krishnan",
+              "evaluator_role": "Public health systems specialist, evaluation panel",
+              "score": 4.7,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 5,
+                  "note": "Directly targets the registration-to-consultation bottleneck and understands OPD flow."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4.5,
+                  "note": "Mature queue orchestration stack with an API-based reporting path."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 4.5,
+                  "note": "Team has run two similar hospital rollouts; 30-day plan is credible."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 5,
+                  "note": "Reference sites show measured wait reduction from 45 to 26 minutes."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4.5,
+                  "note": "Two-hospital scope fits team capacity; on-site support offered."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 4.5,
+                  "note": "Clear operational and data mitigations; rollback plan defined."
+                }
+              ],
+              "summary": "Strongest overall fit. Prior public-hospital results give the panel confidence the pilot target is reachable in four weeks.",
+              "evaluated_on": "2026-06-12"
+            },
+            {
+              "id": 2,
+              "evaluator_name": "R. Srinivasan",
+              "evaluator_role": "Director, e-Governance cell, evaluation panel",
+              "score": 4.5,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4.5,
+                  "note": "Good match; proposal focuses on the measured KPI."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4.5,
+                  "note": "Proven integration pattern with hospital systems."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 4.5,
+                  "note": "Named on-site team and two-week deployment plan."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 4.5,
+                  "note": "Verifiable reference hospitals with reported metrics."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4.5,
+                  "note": "Scope achievable within four weeks."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 4.5,
+                  "note": "Risks identified with assigned mitigations."
+                }
+              ],
+              "summary": "Strong technical readiness and credible evidence base.",
+              "evaluated_on": "2026-06-12"
+            }
+          ],
+          "startup": {
+            "id": 1,
+            "name": "Pravaah Health Systems",
+            "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+            "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+            "sector": "Health technology",
+            "city": "Bengaluru"
+          },
+          "challenge_id": 1,
+          "challenge_title": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "challenge_status": "COMPLETED",
+          "department": "KHFW"
+        }
+      ],
+      "pilots": [
+        {
+          "id": 1,
+          "status": "VERDICTED",
+          "startup_id": 1,
+          "startup": "Pravaah Health Systems",
+          "challenge_id": 1,
+          "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "department": "KHFW",
+          "protocol_status": "SEALED",
+          "created_at": "2026-09-03T20:07:11"
+        }
+      ]
+    },
+    "2": {
+      "startup": {
+        "id": 2,
+        "name": "QueTek Solutions",
+        "tagline": "Digital token and queue analytics for high-volume service counters",
+        "description": "QueTek operates token and queue analytics for service counters in the private sector. Strong queuing model, but no published health-facility deployment and no data-handling agreement with a public hospital yet.",
+        "sector": "Queue analytics",
+        "city": "Mysuru"
+      },
+      "applications": [
+        {
+          "id": 2,
+          "status": "NOT_SELECTED",
+          "proposal": "Bring token-based queuing and analytics to OPD registration. Proposes a 45-day ramp at two hospitals.",
+          "submitted_on": "2026-06-04",
+          "eligibility": {
+            "eligible": true,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": true,
+                "detail": "Operates at service counters in the private sector; hospital deployment not yet demonstrated."
+              },
+              {
+                "check": "Required documentation",
+                "met": true,
+                "detail": "Documentation submitted; references are non-hospital counters."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [
+            {
+              "id": 3,
+              "evaluator_name": "Dr. Meera Krishnan",
+              "evaluator_role": "Public health systems specialist, evaluation panel",
+              "score": 3.8,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4,
+                  "note": "Relevant queuing model, generic to service counters."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4,
+                  "note": "Solid token platform; hospital integration unproven."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 3.5,
+                  "note": "No health facility deployment; ramp plan is longer."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 3,
+                  "note": "References are malls and offices, not hospitals."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 4,
+                  "note": "Feasible if hospital connectivity is resolved early."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 3.5,
+                  "note": "No existing data-handling agreement with public hospitals."
+                }
+              ],
+              "summary": "Capable queuing vendor; evidence base is not health-specific.",
+              "evaluated_on": "2026-06-12"
+            },
+            {
+              "id": 4,
+              "evaluator_name": "R. Srinivasan",
+              "evaluator_role": "Director, e-Governance cell, evaluation panel",
+              "score": 3.6,
+              "dimensions": [
+                {
+                  "dimension": "Problem Fit",
+                  "score": 4,
+                  "note": "Addresses wait reduction generally."
+                },
+                {
+                  "dimension": "Technical Capability",
+                  "score": 4,
+                  "note": "Analytics are strong; OPD integration unproven."
+                },
+                {
+                  "dimension": "Implementation Readiness",
+                  "score": 3.5,
+                  "note": "Longer ramp and fewer named hospital resources."
+                },
+                {
+                  "dimension": "Evidence of Capability",
+                  "score": 3,
+                  "note": "No public-sector health references."
+                },
+                {
+                  "dimension": "Pilot Feasibility",
+                  "score": 3.5,
+                  "note": "Dependent on early connectivity approval."
+                },
+                {
+                  "dimension": "Risk",
+                  "score": 3.5,
+                  "note": "Integration and data-handling unknowns."
+                }
+              ],
+              "summary": "Mid-ranking proposal; gap in health-sector evidence.",
+              "evaluated_on": "2026-06-12"
+            }
+          ],
+          "startup": {
+            "id": 2,
+            "name": "QueTek Solutions",
+            "tagline": "Digital token and queue analytics for high-volume service counters",
+            "description": "QueTek operates token and queue analytics for service counters in the private sector. Strong queuing model, but no published health-facility deployment and no data-handling agreement with a public hospital yet.",
+            "sector": "Queue analytics",
+            "city": "Mysuru"
+          },
+          "challenge_id": 1,
+          "challenge_title": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "challenge_status": "COMPLETED",
+          "department": "KHFW"
+        }
+      ],
+      "pilots": []
+    },
+    "3": {
+      "startup": {
+        "id": 3,
+        "name": "FlowGrid Labs",
+        "tagline": "Footfall sensing and scheduling platform",
+        "description": "FlowGrid provides sensor-based footfall sensing and staff scheduling for commercial venues. Applied for the health challenge but could not demonstrate health-sector deployment or submit the required data-safety documentation.",
+        "sector": "Workforce scheduling",
+        "city": "Hubballi"
+      },
+      "applications": [
+        {
+          "id": 3,
+          "status": "INELIGIBLE",
+          "proposal": "Sensor-based footfall sensing and staff scheduling for OPD registration areas.",
+          "submitted_on": "2026-06-05",
+          "eligibility": {
+            "eligible": false,
+            "checks": [
+              {
+                "check": "Recognized startup",
+                "met": true,
+                "detail": "DPIIT recognition certificate verified against the startup registry."
+              },
+              {
+                "check": "Domain fit",
+                "met": true,
+                "detail": "Proposal targets the published problem domain."
+              },
+              {
+                "check": "Deployment capability",
+                "met": false,
+                "detail": "No health-sector deployment; proposed timeline of 45 days exceeds the published 30-day window."
+              },
+              {
+                "check": "Required documentation",
+                "met": false,
+                "detail": "Data-safety documentation was not submitted at screening close."
+              }
+            ],
+            "screened_on": "2026-06-06"
+          },
+          "evaluations": [],
+          "startup": {
+            "id": 3,
+            "name": "FlowGrid Labs",
+            "tagline": "Footfall sensing and scheduling platform",
+            "description": "FlowGrid provides sensor-based footfall sensing and staff scheduling for commercial venues. Applied for the health challenge but could not demonstrate health-sector deployment or submit the required data-safety documentation.",
+            "sector": "Workforce scheduling",
+            "city": "Hubballi"
+          },
+          "challenge_id": 1,
+          "challenge_title": "Reduce outpatient waiting time at Karnataka district hospitals",
+          "challenge_status": "COMPLETED",
+          "department": "KHFW"
+        }
+      ],
+      "pilots": []
+    }
+  },
+  "evidence": {
+    "evidence": [
+      {
+        "id": 4,
+        "kind": "ops_report",
+        "title": "Week 4 KPI sampling log",
+        "description": "Timestamped sampling log supporting the Week 4 KPI value of 18 minutes.",
+        "source": "Pilot site reporting interface (demo telemetry)",
+        "occurred_on": "2026-07-20",
+        "filename": "week_4_sampling_log.txt",
+        "content_type": "text/plain",
+        "size_bytes": 637,
+        "sha256": "fa13335033f4d3e7c63663abfa26e36a36f087e72d827fb3777e2aeed42994ee",
+        "storage_backend": "local",
+        "uploaded_at": "2026-09-03T20:07:20",
+        "measurement_id": 4,
+        "measurement_label": "Week 4",
+        "latest_check": {
+          "id": 4,
+          "ok": true,
+          "method": "sha256",
+          "note": "Hash recorded at upload; stored bytes matched.",
+          "checked_at": "2026-09-03T20:07:20"
+        },
+        "checks": [
+          {
+            "id": 4,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:20"
+          }
+        ],
+        "pilot_id": 1,
+        "pilot_status": "VERDICTED",
+        "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "department": "KHFW",
+        "startup": "Pravaah Health Systems"
+      },
+      {
+        "id": 3,
+        "kind": "ops_report",
+        "title": "Week 3 KPI sampling log",
+        "description": "Timestamped sampling log supporting the Week 3 KPI value of 21 minutes.",
+        "source": "Pilot site reporting interface (demo telemetry)",
+        "occurred_on": "2026-07-13",
+        "filename": "week_3_sampling_log.txt",
+        "content_type": "text/plain",
+        "size_bytes": 637,
+        "sha256": "da22ab1ae88a4b4f2f876f380908c6186422ad090984ad30c5e084a0bc3132bd",
+        "storage_backend": "local",
+        "uploaded_at": "2026-09-03T20:07:18",
+        "measurement_id": 3,
+        "measurement_label": "Week 3",
+        "latest_check": {
+          "id": 3,
+          "ok": true,
+          "method": "sha256",
+          "note": "Hash recorded at upload; stored bytes matched.",
+          "checked_at": "2026-09-03T20:07:18"
+        },
+        "checks": [
+          {
+            "id": 3,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:18"
+          }
+        ],
+        "pilot_id": 1,
+        "pilot_status": "VERDICTED",
+        "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "department": "KHFW",
+        "startup": "Pravaah Health Systems"
+      },
+      {
+        "id": 2,
+        "kind": "ops_report",
+        "title": "Week 2 KPI sampling log",
+        "description": "Timestamped sampling log supporting the Week 2 KPI value of 26 minutes.",
+        "source": "Pilot site reporting interface (demo telemetry)",
+        "occurred_on": "2026-07-06",
+        "filename": "week_2_sampling_log.txt",
+        "content_type": "text/plain",
+        "size_bytes": 637,
+        "sha256": "4f04e2e0638cf595a4f60a75b71e04d93b27805a2608b3ad5baab88824d2a47f",
+        "storage_backend": "local",
+        "uploaded_at": "2026-09-03T20:07:16",
+        "measurement_id": 2,
+        "measurement_label": "Week 2",
+        "latest_check": {
+          "id": 2,
+          "ok": true,
+          "method": "sha256",
+          "note": "Hash recorded at upload; stored bytes matched.",
+          "checked_at": "2026-09-03T20:07:16"
+        },
+        "checks": [
+          {
+            "id": 2,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:16"
+          }
+        ],
+        "pilot_id": 1,
+        "pilot_status": "VERDICTED",
+        "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "department": "KHFW",
+        "startup": "Pravaah Health Systems"
+      },
+      {
+        "id": 1,
+        "kind": "ops_report",
+        "title": "Week 1 KPI sampling log",
+        "description": "Timestamped sampling log supporting the Week 1 KPI value of 31 minutes.",
+        "source": "Pilot site reporting interface (demo telemetry)",
+        "occurred_on": "2026-06-29",
+        "filename": "week_1_sampling_log.txt",
+        "content_type": "text/plain",
+        "size_bytes": 637,
+        "sha256": "9f4e26d26d68698eb95a44a1351e6f8ced11c874620e21d8a3216ba5e40b2787",
+        "storage_backend": "local",
+        "uploaded_at": "2026-09-03T20:07:14",
+        "measurement_id": 1,
+        "measurement_label": "Week 1",
+        "latest_check": {
+          "id": 1,
+          "ok": true,
+          "method": "sha256",
+          "note": "Hash recorded at upload; stored bytes matched.",
+          "checked_at": "2026-09-03T20:07:14"
+        },
+        "checks": [
+          {
+            "id": 1,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:14"
+          }
+        ],
+        "pilot_id": 1,
+        "pilot_status": "VERDICTED",
+        "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "department": "KHFW",
+        "startup": "Pravaah Health Systems"
+      }
+    ]
+  },
+  "vprs": {
+    "vprs": [
+      {
+        "id": 1,
+        "reference": "VPR/2026/KHFW-001",
+        "status": "ACTIVE",
+        "summary": "Health and Family Welfare Department, Government of Karnataka tested Pravaah Health Systems against a sealed evaluation protocol for Average registration-to-consultation waiting time (target <= 25 minutes). Observed average 24 minutes over 4 weekly samples. Verdict: MET. Evidence verified, validation approved.",
+        "issued_at": "2026-07-24T10:00:00",
+        "startup": "Pravaah Health Systems",
+        "department": "KHFW",
+        "department_name": "Health and Family Welfare Department, Government of Karnataka",
+        "challenge": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "outcome": "MET",
+        "observed_value": 24,
+        "target_value": 25,
+        "unit": "minutes"
+      }
+    ]
+  },
+  "vprsById": {
+    "1": {
+      "id": 1,
+      "reference": "VPR/2026/KHFW-001",
+      "status": "ACTIVE",
+      "summary": "Health and Family Welfare Department, Government of Karnataka tested Pravaah Health Systems against a sealed evaluation protocol for Average registration-to-consultation waiting time (target <= 25 minutes). Observed average 24 minutes over 4 weekly samples. Verdict: MET. Evidence verified, validation approved.",
+      "issued_at": "2026-07-24T10:00:00",
+      "department": {
+        "id": 1,
+        "name": "Health and Family Welfare Department, Government of Karnataka",
+        "short_name": "KHFW",
+        "description": "Operates district and taluk hospitals across Karnataka. Runs the challenge to cut outpatient waiting times through a competitive pilot."
+      },
+      "challenge": {
+        "id": 1,
+        "title": "Reduce outpatient waiting time at Karnataka district hospitals",
+        "problem": "Patients at district hospital OPDs wait an average of 42 minutes between registration and consultation. Long waits crowd waiting areas and delay care. The department wants a proven solution before committing to a wider rollout."
+      },
+      "startup": {
+        "id": 1,
+        "name": "Pravaah Health Systems",
+        "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+        "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+        "sector": "Health technology",
+        "city": "Bengaluru"
+      },
+      "application": {
+        "id": 1,
+        "status": "SELECTED",
+        "proposal": "Deploy the queue orchestration stack at two district hospital OPDs. Rebalance registration counters from live queue data and publish weekly registration-to-consultation aggregates through the PRAMAAN pilot interface.",
+        "submitted_on": "2026-06-03",
+        "eligibility": {
+          "eligible": true,
+          "checks": [
+            {
+              "check": "Recognized startup",
+              "met": true,
+              "detail": "DPIIT recognition certificate verified against the startup registry."
+            },
+            {
+              "check": "Domain fit",
+              "met": true,
+              "detail": "Proposal targets the published problem domain."
+            },
+            {
+              "check": "Deployment capability",
+              "met": true,
+              "detail": "Prior deployments at two Karnataka secondary-care hospitals."
+            },
+            {
+              "check": "Required documentation",
+              "met": true,
+              "detail": "Capability deck, data-safety note, and team credentials submitted."
+            }
+          ],
+          "screened_on": "2026-06-06"
+        },
+        "evaluations": [
+          {
+            "id": 1,
+            "evaluator_name": "Dr. Meera Krishnan",
+            "evaluator_role": "Public health systems specialist, evaluation panel",
+            "score": 4.7,
+            "dimensions": [
+              {
+                "dimension": "Problem Fit",
+                "score": 5,
+                "note": "Directly targets the registration-to-consultation bottleneck and understands OPD flow."
+              },
+              {
+                "dimension": "Technical Capability",
+                "score": 4.5,
+                "note": "Mature queue orchestration stack with an API-based reporting path."
+              },
+              {
+                "dimension": "Implementation Readiness",
+                "score": 4.5,
+                "note": "Team has run two similar hospital rollouts; 30-day plan is credible."
+              },
+              {
+                "dimension": "Evidence of Capability",
+                "score": 5,
+                "note": "Reference sites show measured wait reduction from 45 to 26 minutes."
+              },
+              {
+                "dimension": "Pilot Feasibility",
+                "score": 4.5,
+                "note": "Two-hospital scope fits team capacity; on-site support offered."
+              },
+              {
+                "dimension": "Risk",
+                "score": 4.5,
+                "note": "Clear operational and data mitigations; rollback plan defined."
+              }
+            ],
+            "summary": "Strongest overall fit. Prior public-hospital results give the panel confidence the pilot target is reachable in four weeks.",
+            "evaluated_on": "2026-06-12"
+          },
+          {
+            "id": 2,
+            "evaluator_name": "R. Srinivasan",
+            "evaluator_role": "Director, e-Governance cell, evaluation panel",
+            "score": 4.5,
+            "dimensions": [
+              {
+                "dimension": "Problem Fit",
+                "score": 4.5,
+                "note": "Good match; proposal focuses on the measured KPI."
+              },
+              {
+                "dimension": "Technical Capability",
+                "score": 4.5,
+                "note": "Proven integration pattern with hospital systems."
+              },
+              {
+                "dimension": "Implementation Readiness",
+                "score": 4.5,
+                "note": "Named on-site team and two-week deployment plan."
+              },
+              {
+                "dimension": "Evidence of Capability",
+                "score": 4.5,
+                "note": "Verifiable reference hospitals with reported metrics."
+              },
+              {
+                "dimension": "Pilot Feasibility",
+                "score": 4.5,
+                "note": "Scope achievable within four weeks."
+              },
+              {
+                "dimension": "Risk",
+                "score": 4.5,
+                "note": "Risks identified with assigned mitigations."
+              }
+            ],
+            "summary": "Strong technical readiness and credible evidence base.",
+            "evaluated_on": "2026-06-12"
+          }
+        ],
+        "startup": {
+          "id": 1,
+          "name": "Pravaah Health Systems",
+          "tagline": "Queue-flow orchestration built for hospital outpatient departments",
+          "description": "Pravaah builds registration-to-consultation queue orchestration for public hospitals: digital token flow, counter load balancing, and weekly operational reporting. Prior deployments at two secondary-care hospitals in Karnataka cut average waits from 45 to 26 minutes.",
+          "sector": "Health technology",
+          "city": "Bengaluru"
+        }
+      },
+      "pilot": {
+        "id": 1,
+        "status": "VERDICTED",
+        "scope": "Pravaah queue orchestration at two district hospital OPDs (Bengaluru and Tumakuru), four weekly measurement periods, 28-day window.",
+        "started_at": "2026-06-22T09:00:00",
+        "completed_at": "2026-07-22T10:00:00"
+      },
+      "protocol": {
+        "id": 1,
+        "version": 1,
+        "status": "SEALED",
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target_value": 25,
+        "unit": "minutes",
+        "baseline_value": 42,
+        "duration_days": 28,
+        "sample_interval": "weekly",
+        "measurement_method": "Pilot sites compute the average registration-to-consultation wait time each week from timestamped registration and consultation records, and submit the weekly sample through the pilot reporting interface.",
+        "success_rule": "The pilot succeeds when the average registration-to-consultation waiting time is <= 25 minutes across the measured weekly periods.",
+        "content_hash": "8e95e403865d15e3995ef63a2c0d6e272416b3862262ea21153785ec2b808468",
+        "sealed_by": "Department evaluation cell",
+        "sealed_at": "2026-06-17T09:30:00",
+        "created_at": "2026-09-03T20:07:11",
+        "updated_at": "2026-09-03T20:07:12"
+      },
+      "verdict": {
+        "id": 1,
+        "protocol_version": 1,
+        "metric": "Average registration-to-consultation waiting time",
+        "target_operator": "lte",
+        "target_value": 25,
+        "unit": "minutes",
+        "observed_value": 24,
+        "sample_count": 4,
+        "method": "Mean of 4 weekly samples; target <= 25 minutes.",
+        "outcome": "MET",
+        "issued_by": "Health and Family Welfare Department, Government of Karnataka",
+        "issued_at": "2026-07-24T10:00:00"
+      },
+      "scale": {
+        "outcome": "SCALE_UP_RECOMMENDED",
+        "basis": "Pilot outcome MET (24 minutes vs target <= 25), evidence integrity verified, independent validation approved. This is a recommendation to the department; procurement authority remains with the government.",
+        "decided_by": "Health and Family Welfare Department, Government of Karnataka",
+        "decided_at": "2026-07-24T10:00:00"
+      },
+      "milestones": [
+        {
+          "seq": 1,
+          "title": "Setup and baseline",
+          "description": "Deployment at pilot sites, go-live, and baseline measurement of the KPI before the intervention ramps up.",
+          "amount": "100,000",
+          "amount_raw": 100000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Setup and baseline. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 2,
+          "title": "Initial measurement period",
+          "description": "Weekly KPI samples recorded during the first half of the pilot window.",
+          "amount": "200,000",
+          "amount_raw": 200000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Initial measurement period. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 3,
+          "title": "Target performance period",
+          "description": "Weekly KPI samples recorded during the second half of the pilot window.",
+          "amount": "300,000",
+          "amount_raw": 300000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Released on validation of Target performance period. 22 Jul 2026, 11:00 UTC."
+        },
+        {
+          "seq": 4,
+          "title": "Final evaluation and reporting",
+          "description": "Close-out analysis, complete evidence package, and independent validation review.",
+          "amount": "400,000",
+          "amount_raw": 400000,
+          "currency": "INR",
+          "status": "COMPLETED",
+          "payment_status": "RELEASED",
+          "note": "Completed at 24 Jul 2026, 10:00 UTC."
+        }
+      ],
+      "measurements": [
+        {
+          "id": 1,
+          "label": "Week 1",
+          "value": 31,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-06-29"
+        },
+        {
+          "id": 2,
+          "label": "Week 2",
+          "value": 26,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-06"
+        },
+        {
+          "id": 3,
+          "label": "Week 3",
+          "value": 21,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-13"
+        },
+        {
+          "id": 4,
+          "label": "Week 4",
+          "value": 18,
+          "unit": "minutes",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "recorded_on": "2026-07-20"
+        }
+      ],
+      "evidence": [
+        {
+          "id": 1,
+          "kind": "ops_report",
+          "title": "Week 1 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 1 KPI value of 31 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-06-29",
+          "filename": "week_1_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "9f4e26d26d68698eb95a44a1351e6f8ced11c874620e21d8a3216ba5e40b2787",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:14",
+          "measurement_id": 1,
+          "measurement_label": "Week 1",
+          "latest_check": {
+            "id": 1,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:14"
+          },
+          "checks": [
+            {
+              "id": 1,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:14"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "kind": "ops_report",
+          "title": "Week 2 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 2 KPI value of 26 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-06",
+          "filename": "week_2_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "4f04e2e0638cf595a4f60a75b71e04d93b27805a2608b3ad5baab88824d2a47f",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:16",
+          "measurement_id": 2,
+          "measurement_label": "Week 2",
+          "latest_check": {
+            "id": 2,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:16"
+          },
+          "checks": [
+            {
+              "id": 2,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:16"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "kind": "ops_report",
+          "title": "Week 3 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 3 KPI value of 21 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-13",
+          "filename": "week_3_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "da22ab1ae88a4b4f2f876f380908c6186422ad090984ad30c5e084a0bc3132bd",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:18",
+          "measurement_id": 3,
+          "measurement_label": "Week 3",
+          "latest_check": {
+            "id": 3,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:18"
+          },
+          "checks": [
+            {
+              "id": 3,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:18"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "kind": "ops_report",
+          "title": "Week 4 KPI sampling log",
+          "description": "Timestamped sampling log supporting the Week 4 KPI value of 18 minutes.",
+          "source": "Pilot site reporting interface (demo telemetry)",
+          "occurred_on": "2026-07-20",
+          "filename": "week_4_sampling_log.txt",
+          "content_type": "text/plain",
+          "size_bytes": 637,
+          "sha256": "fa13335033f4d3e7c63663abfa26e36a36f087e72d827fb3777e2aeed42994ee",
+          "storage_backend": "local",
+          "uploaded_at": "2026-09-03T20:07:20",
+          "measurement_id": 4,
+          "measurement_label": "Week 4",
+          "latest_check": {
+            "id": 4,
+            "ok": true,
+            "method": "sha256",
+            "note": "Hash recorded at upload; stored bytes matched.",
+            "checked_at": "2026-09-03T20:07:20"
+          },
+          "checks": [
+            {
+              "id": 4,
+              "ok": true,
+              "method": "sha256",
+              "note": "Hash recorded at upload; stored bytes matched.",
+              "checked_at": "2026-09-03T20:07:20"
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "validator_name": "Dr. Anita Rao (Independent Evaluator)",
+        "notes": "Independent cross-check of weekly sampling logs against counter registers at both pilot sites. Reported aggregates match source records; evidence integrity verified. Approved.",
+        "decided_at": "2026-07-22T11:00:00"
+      },
+      "audit": [
+        {
+          "id": 1,
+          "kind": "state",
+          "summary": "Pilot selected for Pravaah Health Systems after competitive evaluation.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-15T10:00:00",
+          "content_hash": "cbb10063f6a3adb0d3c89e59491e73840a804d3f15c4ee5bfc07cd01bd06335a",
+          "prev_hash": null
+        },
+        {
+          "id": 2,
+          "kind": "protocol",
+          "summary": "Evaluation protocol v1 approved by the department for sealing.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-16T14:00:00",
+          "content_hash": "da946b29a15cffdf450bd1de8febc1005cfec65648d50975f0de3a2e3d2be11b",
+          "prev_hash": "cbb10063f6a3adb0d3c89e59491e73840a804d3f15c4ee5bfc07cd01bd06335a"
+        },
+        {
+          "id": 3,
+          "kind": "protocol",
+          "summary": "Evaluation criteria locked (protocol v1, SHA-256 8e95e403865d) before the pilot started.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-17T09:30:00",
+          "content_hash": "e45b27bf1bc04bc2d5f9919685c9fafde8a26e0bfa6c9b249fd3d8c287177a4f",
+          "prev_hash": "da946b29a15cffdf450bd1de8febc1005cfec65648d50975f0de3a2e3d2be11b"
+        },
+        {
+          "id": 4,
+          "kind": "state",
+          "summary": "Milestone 1: Setup and baseline completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-06-22T09:00:00",
+          "content_hash": "d47569d77390c8fa020fc256f779f02d83451d20c45bdcf231c735a96384f55b",
+          "prev_hash": "e45b27bf1bc04bc2d5f9919685c9fafde8a26e0bfa6c9b249fd3d8c287177a4f"
+        },
+        {
+          "id": 5,
+          "kind": "state",
+          "summary": "Pilot started at the pilot sites. Milestone 1 (setup and baseline) completed.",
+          "actor": "Department evaluation cell",
+          "occurred_at": "2026-06-22T09:00:00",
+          "content_hash": "7ce46190c64b20dd96efcb087d27163c83bfe21488197801dd2161fde3991dc3",
+          "prev_hash": "d47569d77390c8fa020fc256f779f02d83451d20c45bdcf231c735a96384f55b"
+        },
+        {
+          "id": 6,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 1 31 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "02595038e5e82129116187d151ddaa489c0d2efa5055e9046c62c83b13e4f436",
+          "prev_hash": "7ce46190c64b20dd96efcb087d27163c83bfe21488197801dd2161fde3991dc3"
+        },
+        {
+          "id": 7,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 1 KPI sampling log (week_1_sampling_log.txt, SHA-256 9f4e26d26d68, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "cf8061e66d7554f65cc3dc30651d3ed6cd6c11008acfe19d0480903caac1d0f6",
+          "prev_hash": "02595038e5e82129116187d151ddaa489c0d2efa5055e9046c62c83b13e4f436"
+        },
+        {
+          "id": 8,
+          "kind": "state",
+          "summary": "Milestone 2: Initial measurement period completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "8eb2caccdabd8221cf5090edf17b1e3286c3064adf3106e3f8a6e4301199e38e",
+          "prev_hash": "cf8061e66d7554f65cc3dc30651d3ed6cd6c11008acfe19d0480903caac1d0f6"
+        },
+        {
+          "id": 9,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 2 26 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "7e8cb237ed2f65c3822ab2775003a4b1880d6eaabdb560c5336444316cc29850",
+          "prev_hash": "8eb2caccdabd8221cf5090edf17b1e3286c3064adf3106e3f8a6e4301199e38e"
+        },
+        {
+          "id": 10,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 2 KPI sampling log (week_2_sampling_log.txt, SHA-256 4f04e2e0638c, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "c98fde9aa8b450c9e26794771daccfe0aa58ce05f272ef1a77369544d99d8d65",
+          "prev_hash": "7e8cb237ed2f65c3822ab2775003a4b1880d6eaabdb560c5336444316cc29850"
+        },
+        {
+          "id": 11,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 3 21 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "bb695d2ee6641c1bf92061b82564cf397d25cf52ad5df5a72f5f53fa3f5f5583",
+          "prev_hash": "c98fde9aa8b450c9e26794771daccfe0aa58ce05f272ef1a77369544d99d8d65"
+        },
+        {
+          "id": 12,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 3 KPI sampling log (week_3_sampling_log.txt, SHA-256 da22ab1ae88a, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "95d1dee7665890b39b1d1fef9cc82c1fb4da2393775afabf868fd35a966aa72e",
+          "prev_hash": "bb695d2ee6641c1bf92061b82564cf397d25cf52ad5df5a72f5f53fa3f5f5583"
+        },
+        {
+          "id": 13,
+          "kind": "measurement",
+          "summary": "Measurement recorded: Week 4 18 minutes (Pilot site reporting interface (demo telemetry)).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "6594a8578da4a07b256d4208900013cc0db9d031eaf914ba0f36e64eaae39443",
+          "prev_hash": "95d1dee7665890b39b1d1fef9cc82c1fb4da2393775afabf868fd35a966aa72e"
+        },
+        {
+          "id": 14,
+          "kind": "evidence",
+          "summary": "Evidence submitted: Week 4 KPI sampling log (week_4_sampling_log.txt, SHA-256 fa13335033f4, local storage).",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "7eba9226a7da6ddd025921eb0a3aa09be7992b3c067c464d5f02e8cdcbb007dd",
+          "prev_hash": "6594a8578da4a07b256d4208900013cc0db9d031eaf914ba0f36e64eaae39443"
+        },
+        {
+          "id": 15,
+          "kind": "state",
+          "summary": "Milestone 3: Target performance period completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "30163a6bc5fbf1f3750159940d9e3f525659fc9246f073238720ffaeb16511c6",
+          "prev_hash": "7eba9226a7da6ddd025921eb0a3aa09be7992b3c067c464d5f02e8cdcbb007dd"
+        },
+        {
+          "id": 16,
+          "kind": "state",
+          "summary": "Measurement window closed. The pilot is ready for evidence verification and independent validation.",
+          "actor": "Demo telemetry sync",
+          "occurred_at": "2026-07-22T10:00:00",
+          "content_hash": "c997b7443fbd80d289a48a89451720a16bf8def734bd3b5eba8907756df39159",
+          "prev_hash": "30163a6bc5fbf1f3750159940d9e3f525659fc9246f073238720ffaeb16511c6"
+        },
+        {
+          "id": 17,
+          "kind": "validation",
+          "summary": "Independent validation opened for review by Dr. Anita Rao (Independent Evaluator).",
+          "actor": "Independent evaluation unit",
+          "occurred_at": "2026-07-21T11:00:00",
+          "content_hash": "74e398d72b0ba2d2f9dbd940fcc1876c7c3b5a75556a24abeb5e7bf6fa196e84",
+          "prev_hash": "c997b7443fbd80d289a48a89451720a16bf8def734bd3b5eba8907756df39159"
+        },
+        {
+          "id": 18,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 1: Setup and baseline.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "3c461b3f042c6619f5218f74084a36f95809490cce6bae30f28c29cc80fd54c6",
+          "prev_hash": "74e398d72b0ba2d2f9dbd940fcc1876c7c3b5a75556a24abeb5e7bf6fa196e84"
+        },
+        {
+          "id": 19,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 2: Initial measurement period.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "af3cba79995945a992a0863a5f59d06c7aa5065555b802a6031b3181d13484b7",
+          "prev_hash": "3c461b3f042c6619f5218f74084a36f95809490cce6bae30f28c29cc80fd54c6"
+        },
+        {
+          "id": 20,
+          "kind": "state",
+          "summary": "Milestone payment released for milestone 3: Target performance period.",
+          "actor": "",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "f2a26983e8578e3bf0b643f3d510e773cfbbfef4fd4659efb9563225c2034b9a",
+          "prev_hash": "af3cba79995945a992a0863a5f59d06c7aa5065555b802a6031b3181d13484b7"
+        },
+        {
+          "id": 21,
+          "kind": "validation",
+          "summary": "Independent validator Dr. Anita Rao (Independent Evaluator) approved the pilot result and evidence.",
+          "actor": "Dr. Anita Rao (Independent Evaluator)",
+          "occurred_at": "2026-07-22T11:00:00",
+          "content_hash": "fe5137298f261aa19ee2dc7201d5425deaafcb60cd69a24ffcf006562a51fd85",
+          "prev_hash": "f2a26983e8578e3bf0b643f3d510e773cfbbfef4fd4659efb9563225c2034b9a"
+        },
+        {
+          "id": 22,
+          "kind": "state",
+          "summary": "Milestone 4: Final evaluation and reporting completed. Payment eligible.",
+          "actor": "",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "3a74bc933836e63d6f03b5af5620bf9f5275656bd2affeb348aaa9bf451fe696",
+          "prev_hash": "fe5137298f261aa19ee2dc7201d5425deaafcb60cd69a24ffcf006562a51fd85"
+        },
+        {
+          "id": 23,
+          "kind": "verdict",
+          "summary": "Deterministic verdict issued: MET (observed 24, target <= 25 minutes, protocol v1).",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "2796d09f9c08f953c390320f807837480780a57e0fde5e36e9e8321868c9049b",
+          "prev_hash": "3a74bc933836e63d6f03b5af5620bf9f5275656bd2affeb348aaa9bf451fe696"
+        },
+        {
+          "id": 24,
+          "kind": "state",
+          "summary": "Scale recommendation recorded: SCALE_UP_RECOMMENDED.",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "d4d2eaab93bc98e8e90a20151b6044cf5e73d37f3386a710723d156df01681d1",
+          "prev_hash": "2796d09f9c08f953c390320f807837480780a57e0fde5e36e9e8321868c9049b"
+        },
+        {
+          "id": 25,
+          "kind": "state",
+          "summary": "Verified Pilot Record VPR/2026/KHFW-001 issued.",
+          "actor": "Health and Family Welfare Department, Government of Karnataka",
+          "occurred_at": "2026-07-24T10:00:00",
+          "content_hash": "1bb950909c785a7b3e07da34c2c9f1b6dea68e9b11764548c598ea872ee32c82",
+          "prev_hash": "d4d2eaab93bc98e8e90a20151b6044cf5e73d37f3386a710723d156df01681d1"
+        }
+      ]
+    }
+  }
+}

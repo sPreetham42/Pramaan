@@ -7,13 +7,15 @@ government department publish a problem, run a sealed pilot with a startup,
 collect tamper-evident evidence, and produce a **Verified Pilot Record (VPR)**
 that can be reused for procurement decisions.
 
-## Current phase: FOUNDATION
+## Current phase: DEMO PROTOTYPE
 
-This repository is the **technical foundation only**. No PRAMAAN business
-modules (challenges, evaluations, protocols, sealing, pilots, evidence,
-validation, verdicts, VPR, reuse, procurement, AI, authentication) are
-implemented yet. See [`CONTEXT.md`](CONTEXT.md) for the full project context
-and the 4-person work division.
+The repository now contains a working **demonstration prototype**: the full
+government-to-reuse journey (challenge, competitive evaluation, sealed
+protocol, pilot, evidence, validation, verdict, Verified Pilot Record and
+proof reuse) runs on seeded Karnataka case-study data. See
+[`CONTEXT.md`](CONTEXT.md) for the product context and the 4-person work
+division. Production concerns (authentication, nationwide evidence
+infrastructure, real integrations) are deliberately out of scope.
 
 ## Technology stack
 
@@ -28,11 +30,16 @@ and the 4-person work division.
 
 ## What works today
 
-- `GET /` and `GET /health` (reports PostgreSQL and MinIO reachability)
-- PostgreSQL + MinIO + backend + frontend run together via Docker Compose
-- The backend creates the `pramaan-evidence` bucket in MinIO at startup
-- A minimal React page ("Foundation build is running") that calls the
-  backend `/health` through a centralized API client
+- The complete demo journey: challenge → applicants → competitive selection
+  → sealed evaluation criteria → pilot → weekly measurements → evidence →
+  validation → deterministic verdict → Verified Pilot Record → proof reuse
+  in a second department
+- Role-aware demo UI (Government / Startup / Validator) with comparison
+  charts and progress visuals
+- Deterministic seeded case study (Karnataka) with demo telemetry and a
+  tamper-detection demonstration
+- Docker Compose stack (frontend, backend, PostgreSQL, MinIO); backend
+  tests and frontend lint/build run in CI
 
 ## Run with Docker Compose
 
@@ -85,7 +92,7 @@ npm run dev        # http://localhost:5173, proxies /api and /health to :8000
 
 ```bash
 cd backend
-.venv/Scripts/python -m pytest          # hermetic defaults; 3 tests
+.venv/Scripts/python -m pytest          # hermetic defaults; 18 tests
 # Against a real PostgreSQL (disposable database):
 # DATABASE_URL=postgresql+psycopg://user:pass@host:5432/dbname .venv/Scripts/python -m pytest
 ```
@@ -117,3 +124,25 @@ directly.
 Full instructions, branch conventions, and the PR/review workflow live in
 [`CONTRIBUTING.md`](CONTRIBUTING.md). Security expectations live in
 [`SECURITY.md`](SECURITY.md).
+
+## GitHub Pages (static preview)
+
+The frontend can be published to GitHub Pages as a **read-only snapshot** of
+the demo data (no backend on Pages, so the hosted site serves the seeded
+case study from a committed snapshot instead of the API).
+
+1. In the repository settings, enable Pages with **Source: GitHub Actions**.
+2. Push to `main` (or run the *Deploy static demo to GitHub Pages* workflow
+   manually). The workflow builds with `VITE_STATIC_DEMO=true` and deploys
+   `frontend/dist`.
+3. The hosted site shows the full journey outline, charts, and the Verified
+   Pilot Record. Mutations and live evidence verification are disabled with a
+   clear notice — run the app locally or via Docker Compose for the
+   interactive flow.
+
+After changing the seeded scenario, refresh the snapshot and commit it:
+
+```bash
+# backend must be running on :8000
+node frontend/scripts/generate-static-data.mjs
+```

@@ -109,6 +109,16 @@ export default function AppShell({
           </div>
         </header>
 
+        {import.meta.env.VITE_STATIC_DEMO === "true" && (
+          <div className="border-b border-line bg-warn-bg">
+            <p className="mx-auto max-w-content px-6 py-2 text-12 text-warn lg:px-8">
+              Static preview on GitHub Pages: a read-only snapshot of the demo
+              data. Run the app locally or with Docker for the full interactive
+              journey.
+            </p>
+          </div>
+        )}
+
         <main className="mx-auto max-w-content px-6 py-8 lg:px-8">{children}</main>
 
         <footer className="mx-auto max-w-content border-t border-line px-6 py-6 text-12 leading-relaxed text-muted lg:px-8">

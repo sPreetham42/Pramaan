@@ -464,9 +464,15 @@ export default function RecordDetailPage({ id }: { id: number }) {
           summary="Every workflow event is chained in SHA-256; expand to verify the chain end to end."
         >
           <div className="mb-4 flex flex-wrap items-center gap-3">
-            <Button tone="plain" busy={chainAction.busy} onClick={runChain}>
-              Verify chain
-            </Button>
+            {api.staticMode ? (
+              <p className="text-13 text-muted">
+                Chain verification runs in the live demo.
+              </p>
+            ) : (
+              <Button tone="plain" busy={chainAction.busy} onClick={runChain}>
+                Verify chain
+              </Button>
+            )}
             {chain &&
               (chain.ok ? (
                 <StatusMark

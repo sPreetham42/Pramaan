@@ -106,17 +106,21 @@ export default function EvidencePage() {
                           <StatusMark label={integrity.label} tone={integrity.tone} />
                         </td>
                         <td className={tdCls}>
-                          <div className="flex flex-wrap items-center gap-2">
-                            <Button tone="plain" busy={verifyAction.busy} onClick={() => verify(e.id)}>
-                              Verify
-                            </Button>
-                            <a
-                              className="inline-flex items-center px-2 py-1 text-13 text-accent hover:text-accent-strong hover:underline"
-                              href={api.evidence.downloadUrl(e.id)}
-                            >
-                              Download
-                            </a>
-                          </div>
+                          {api.staticMode ? (
+                            <span className="text-12 text-muted">Static preview</span>
+                          ) : (
+                            <div className="flex flex-wrap items-center gap-2">
+                              <Button tone="plain" busy={verifyAction.busy} onClick={() => verify(e.id)}>
+                                Verify
+                              </Button>
+                              <a
+                                className="inline-flex items-center px-2 py-1 text-13 text-accent hover:text-accent-strong hover:underline"
+                                href={api.evidence.downloadUrl(e.id)}
+                              >
+                                Download
+                              </a>
+                            </div>
+                          )}
                         </td>
                       </tr>
                     );

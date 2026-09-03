@@ -18,6 +18,7 @@ import type {
   VprDetail,
   VprSummary,
 } from "../types";
+import demoSnapshot from "../static-data/demo.json";
 
 /**
  * Centralised API client. All HTTP goes through here; components never call
@@ -25,6 +26,32 @@ import type {
  * (local development) forwards /api and /health to the backend.
  */
 const BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/+$/, "");
+
+/**
+ * Static (GitHub Pages) mode: built with VITE_STATIC_DEMO=true, every GET
+ * is answered from the committed snapshot of the seeded demo data and every
+ * mutation is refused, so the hosted demo stays honest (read-only preview).
+ */
+const STATIC_DEMO = import.meta.env.VITE_STATIC_DEMO === "true";
+
+const STATIC_ROUTES: Record<string, () => unknown> = {
+  "/health": () => demoSnapshot.health,
+  "/api/v1/challenges": () => demoSnapshot.challenges,
+  "/api/v1/challenges/1": () => demoSnapshot.challengesById["1"],
+  "/api/v1/challenges/2": () => demoSnapshot.challengesById["2"],
+  "/api/v1/pilots/1": () => demoSnapshot.pilotsById["1"],
+  "/api/v1/startups": () => demoSnapshot.startups,
+  "/api/v1/startups/1": () => demoSnapshot.startupsById["1"],
+  "/api/v1/startups/2": () => demoSnapshot.startupsById["2"],
+  "/api/v1/startups/3": () => demoSnapshot.startupsById["3"],
+  "/api/v1/evidence": () => demoSnapshot.evidence,
+  "/api/v1/vprs": () => demoSnapshot.vprs,
+  "/api/v1/vprs/1": () => demoSnapshot.vprsById["1"],
+};
+
+function staticLookup(path: string): unknown | undefined {
+  return STATIC_ROUTES[path]?.();
+}
 
 export class ApiError extends Error {
   readonly status: number;
@@ -52,6 +79,22 @@ function messageFrom(body: unknown): string {
 }
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  if (STATIC_DEMO) {
+    const method = (options?.method ?? "GET").toUpperCase();
+    if (method !== "GET") {
+      throw new ApiError(
+        "This static preview is read-only. Run the app locally (README) for the interactive demo.",
+        405,
+      );
+    }
+    const hit = staticLookup(path);
+    if (hit !== undefined) {
+      return new Promise<T>((resolve) => {
+        setTimeout(() => resolve(hit as T), 120);
+      });
+    }
+    throw new ApiError(`Static preview has no data for ${path}.`, 404);
+  }
   const response = await fetch(`${BASE_URL}${path}`, options);
   if (!response.ok) {
     let message = `Request failed with status ${response.status}`;
@@ -75,6 +118,9 @@ function jsonOptions(method: string, body?: unknown): RequestInit {
 }
 
 export const api = {
+  /** True when built for the GitHub Pages static preview. */
+  staticMode: STATIC_DEMO,
+
   health: () => request<ApiHealth>("/health"),
 
   departments: {
