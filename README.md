@@ -101,3 +101,19 @@ storage/     Placeholder — future demo evidence files live here
 
 See [`CONTEXT.md`](CONTEXT.md) for what each developer will build next and
 which files to work in.
+
+## Contributing
+
+- **`main` is protected** — nobody (including maintainers) pushes to it
+directly.
+- Create a **feature branch** from `main` for your work:
+  `feat/<name>`, `fix/<name>`, `docs/<name>`, `refactor/<name>`, `test/<name>`.
+- All changes land on `main` **through a Pull Request**.
+- At least **one teammate reviews** the PR before it is merged.
+- **CI must pass** before merging (backend tests + frontend lint/build).
+- Run the tests before opening a PR (backend: `pytest`; frontend:
+  `npm run build` and `npm run lint`).
+
+Full instructions, branch conventions, and the PR/review workflow live in
+[`CONTRIBUTING.md`](CONTRIBUTING.md). Security expectations live in
+[`SECURITY.md`](SECURITY.md).

@@ -1,7 +1,7 @@
-# Environment / secrets
+# Environment / secrets (keep .env.example tracked)
 .env
-.env.local
-*.env.local
+.env.*
+!.env.example
 
 # Python
 __pycache__/
@@ -27,8 +27,21 @@ dist-ssr/
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+npm-debug.log*
+
+# Local databases / dumps
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
 # Local scratch (e.g. throwaway PostgreSQL clusters used during verification)
 .tmp/
+
+# Local evidence artifacts written by the backend demo storage
+storage/evidence-demo/
 
 # Freebuff agent workspace metadata
 .freebuff/

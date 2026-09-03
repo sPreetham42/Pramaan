@@ -1,0 +1,16 @@
+# CODEOWNERS — placeholder, intentionally NOT active.
+#
+# This file currently defines NO ownership rules (only comments), so it is
+# inert and cannot block anyone's PRs. Fill it in once the team's GitHub
+# usernames are known — replace the commented examples below with real
+# rules, then GitHub will require the listed owners to review matching PRs.
+#
+# Syntax reference:
+# https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Examples (uncomment and adapt when usernames are known):
+#
+#   * @sPreetham42
+#   backend/ @person2-github-username @person3-github-username
+#   frontend/ @person4-github-username
+#   docs/ @sPreetham42
