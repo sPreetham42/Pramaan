@@ -1,6 +1,66 @@
-"""Domain models (added by module developers).
+"""Domain models for PRAMAAN. Importing this package registers every model
+on ``Base.metadata`` (needed by schema creation and reset tooling)."""
 
-No PRAMAAN domain tables exist during the foundation phase on purpose.
-Future models (challenge, startup, protocol, evidence, ...) live in this
-package and inherit from ``app.db.base.Base``.
-"""
+from app.models.domain import (
+    Application,
+    ApplicationStatus,
+    AuditEvent,
+    Challenge,
+    ChallengeStatus,
+    Department,
+    Evaluation,
+    Evidence,
+    EvidenceCheck,
+    Measurement,
+    MilestoneStatus,
+    PaymentStatus,
+    Pilot,
+    PilotMilestone,
+    PilotRisk,
+    PilotStatus,
+    Protocol,
+    ProtocolStatus,
+    ReuseAction,
+    ReuseDecision,
+    ScaleDecision,
+    ScaleOutcome,
+    Startup,
+    Validation,
+    ValidationStatus,
+    Verdict,
+    VerdictOutcome,
+    Vpr,
+    VprStatus,
+)
+
+__all__ = [
+    "Application",
+    "ApplicationStatus",
+    "AuditEvent",
+    "Challenge",
+    "ChallengeStatus",
+    "Department",
+    "Evaluation",
+    "Evidence",
+    "EvidenceCheck",
+    "Measurement",
+    "MilestoneStatus",
+    "PaymentStatus",
+    "Pilot",
+    "PilotMilestone",
+    "PilotRisk",
+    "PilotStatus",
+    "Protocol",
+    "ProtocolStatus",
+    "ReuseAction",
+    "ReuseDecision",
+    "ScaleDecision",
+    "ScaleOutcome",
+    "Startup",
+    "Validation",
+    "ValidationStatus",
+    "Verdict",
+    "VerdictOutcome",
+    "Vpr",
+    "VprStatus",
+]

@@ -54,6 +54,14 @@ services:
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-pramaan_minio_dev_secret}
       MINIO_BUCKET: ${MINIO_BUCKET:-pramaan-evidence}
       MINIO_SECURE: "false"
+      # Prototype demo configuration (see .env.example)
+      DEMO_MODE: "${DEMO_MODE:-true}"
+      DEMO_SEED_MILESTONE: "${DEMO_SEED_MILESTONE:-VERDICTED}"
+      SEED_DEMO_ON_STARTUP: "${SEED_DEMO_ON_STARTUP:-true}"
+      AUTO_CREATE_SCHEMA: "${AUTO_CREATE_SCHEMA:-true}"
+      EVIDENCE_LOCAL_DIR: "/app/data/evidence"
+    volumes:
+      - backend_evidence:/app/data/evidence
     ports:
       - "8000:8000"
     depends_on:
@@ -73,3 +81,4 @@ services:
 volumes:
   postgres_data:
   minio_data:
+  backend_evidence:
