@@ -1,0 +1,75 @@
+# PRAMAAN — offline-first SIH demonstration environment.
+#
+# Starts: postgres, minio, backend (FastAPI), frontend (React, served by nginx).
+#
+#   docker compose up --build
+#
+# Dev defaults live in .env.example; copy to .env to override.
+# None of the values below are real secrets — they are development-only defaults.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pramaan}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pramaan_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-pramaan}
+    ports:
+      # Host port 5433 avoids colliding with a locally running PostgreSQL on 5432.
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pramaan} -d ${POSTGRES_DB:-pramaan}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-pramaan-minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-pramaan_minio_dev_secret}
+    ports:
+      - "9000:9000" # S3 API
+      - "9001:9001" # Console
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-pramaan}:${POSTGRES_PASSWORD:-pramaan_dev_password}@postgres:5432/${POSTGRES_DB:-pramaan}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-pramaan-minio}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-pramaan_minio_dev_secret}
+      MINIO_BUCKET: ${MINIO_BUCKET:-pramaan-evidence}
+      MINIO_SECURE: "false"
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  minio_data:
