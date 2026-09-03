@@ -1,128 +1,153 @@
 # PRAMAAN — Project Context
 
 > Master context file for PRAMAAN developers and AI coding agents.
-> Concise project-level reference — not an implementation plan or TODO list.
+> This is a **context/reference** file — not an implementation plan and not
+> a running task list. Do not overwrite or pad it with status updates; a
+> separate `STATUS.md` can be introduced later if the team needs one.
+> Update this file only when a genuine architectural or project-level
+> decision changes.
 
-## What PRAMAAN is
+## 1. Project identity
 
-**PRAMAAN = "Prove Once. Reuse the Proof."**
+**PRAMAAN** · **Prove Once. Reuse the Proof.** · SIH26136
 
-An offline-first, self-contained SIH (Smart India Hackathon) demonstration:
-a government department publishes a problem, a startup is selected through
-evaluation, a **protocol** is agreed and **sealed** in advance, a pilot runs,
-**evidence** is collected with integrity verification, an **independent
-validation** produces a **deterministic verdict**, and the outcome becomes a
-**Verified Pilot Record (VPR)** that supports **reuse assessment** and
-**procurement** decisions.
+PRAMAAN is an offline-first, self-contained Smart India Hackathon (SIH)
+prototype. A government department defines a problem with measurable
+success criteria, selects a startup through evaluation, runs a **sealed,
+evidence-collecting pilot**, and obtains a **Verified Pilot Record (VPR)** —
+a tamper-evident, independently validated proof that can be reused to
+support procurement decisions without re-running the pilot.
 
-The core mechanism:
+## 2. Final product lifecycle
 
 ```text
-Government Problem → Startup → Evaluation → Protocol
-→ SEAL → Pilot → Evidence → Validation → Verdict
-→ Verified Pilot Record → Reuse → Procurement Support
+Government Problem
+→ Startup Discovery
+→ Human Evaluation
+→ Protocol
+→ Seal
+→ Pilot
+→ Evidence
+→ Independent Validation
+→ Deterministic Verdict
+→ VPR
+→ Reuse
+→ Procurement Support
 ```
 
-The most important chain: **SEAL → EVIDENCE → VALIDATION → VERDICT → VPR → REUSE**.
+The central innovation:
 
-## Final architecture
+**Define success → lock it → run the pilot → verify evidence → preserve the
+proof → enable reuse.**
+
+## 3. Non-negotiable principles
+
+- Success criteria (KPIs, baselines, targets) are **locked before the pilot**.
+- Sealed records are never silently modified; changes leave an audit trail.
+- Evidence is **tamper-evident** (SHA-256 hashing, hash chains).
+- Hashing proves record integrity only — it does **not** prove original
+  real-world truth.
+- An **independent validation** step exists, separate from the pilot runner.
+- Verdicts are **deterministic**: reproducible from pre-committed criteria
+  and verified evidence.
+- AI stays **outside the authoritative decision path**.
+- **Failed pilots are preserved** as honest records — they are still proof.
+- VPRs are **reusable** assets, not one-off reports.
+- Procurement authority remains with government officials; PRAMAAN supports
+  decisions but **does not award procurement**.
+- Avoid over-engineering — this is a self-contained SIH prototype.
+
+## 4. Final technology decisions
+
+- Frontend: React + TypeScript + Tailwind CSS + Vite
+- Backend: FastAPI (Python), single service with logical modules
+- Database: PostgreSQL
+- Object storage: MinIO
+- API: REST (versioned namespace `/api/v1`)
+- Integrity: SHA-256 + hash chain
+- AI: optional, local only (e.g. Ollama) — never required for the demo
+- Local orchestration: Docker Compose (frontend, backend, postgres, minio)
+- No microservices, Kubernetes, Kafka, blockchain, or other heavy infra
+
+## 5. SIH demo model
+
+The eventual demo shows two perspectives via a **simple demo role switcher** —
+no login, passwords, OAuth, or sessions; production authentication is
+explicitly out of scope for the SIH demo.
+
+- **Government Executive:** Problem → Startup → Evaluation → Pilot →
+  Verification → VPR → Reuse
+- **Startup Founder:** Challenge → Application → Pilot → Evidence →
+  Validation → VPR
+
+The demo runs on a **SIMULATED case study** (Karnataka Health Department /
+OPD waiting time / Pravaah Health Systems) and must always be labelled as
+demonstration data, never presented as a real government pilot.
+
+## 6. Team ownership
+
+- **Person 1 — Project Owner:** foundation now; integration, final polish
+  and demo stability later.
+- **Person 2 — Government Workflow:** Challenge → Startup → Application →
+  Evaluation → Selection.
+- **Person 3 — Trust Core:** Protocol → Seal → Pilot → Evidence →
+  Validation → Verdict.
+- **Person 4 — VPR / Reuse:** VPR → Reuse → Procurement Support → AI →
+  Mock Integrations.
+
+Respect module ownership: do not implement another developer's module.
+
+## 7. Current phase
+
+**CURRENT PHASE: FOUNDATION**
+
+The repository provides the technical base only. **NOT IMPLEMENTED YET:**
+
+- Government workflow
+- Trust core
+- VPR / reuse
+- AI
+- Integrations (real or mock)
+
+Do not claim any unfinished feature exists. What does work today: the four
+Docker Compose services, `GET /` and `GET /health` (reports PostgreSQL and
+MinIO reachability), PostgreSQL/MinIO wiring, a minimal React page calling
+the backend through a centralized API client, and the pytest foundation.
+
+## 8. Future architecture
 
 ```text
-Browser
-   ↓
-React + TypeScript + Tailwind (Vite)
+React (frontend)
    ↓ REST
-FastAPI (one backend, logical modules, no microservices)
-   ↓            ↓
-PostgreSQL     MinIO (evidence files)
+FastAPI (backend, one service)
+   ↓
+PostgreSQL + MinIO
 ```
 
-Future logical modules (inside the single backend): Challenge, Startup,
+The backend will eventually contain **logical modules** (Challenge, Startup,
 Evaluation, Protocol, Sealing, Pilot, Evidence, Validation, Verdict, VPR,
-Reuse, Procurement, Audit, AI, Adapters (mock integrations).
+Reuse, Procurement, Audit, AI, Adapters) inside the one FastAPI service.
+These are future work and must **not** be implemented during the foundation
+phase.
 
-## Non-negotiable product principles
+## 9. AI boundary
 
-- **Deterministic trust**: verdicts must be reproducible from
-  pre-committed protocols, sealed evidence and hashes — no black-box
-  judgment calls at the core.
-- **Prove once, reuse the proof**: a verified pilot outcome must be
-  reusable for procurement support without re-running the pilot.
-- **Offline-first and self-contained**: the SIH demonstration must run
-  locally via `docker compose up --build` with no external services.
-- **No fake claims**: the demo runs on a **SIMULATED case study** labelled
-  as demonstration data — never presented as a real government pilot.
-- Simplicity for a prototype: no microservices/Kubernetes/Kafka/blockchain.
+- AI **may assist with**: KPI suggestions, protocol suggestions, similar-VPR
+  discovery, evidence summaries.
+- AI must **NOT**: select startups, modify sealed criteria, generate official
+  verdicts, or approve procurement.
 
-### Simulated demo scenario (later)
+## 10. Agent instructions
 
-Karnataka Health Department · excessive OPD waiting time · baseline 42 min ·
-KPI: registration-to-consultation waiting time · target ≤ 25 min · pilot:
-2 hospitals / 30 days · startup: Pravaah Health Systems.
+Before modifying PRAMAAN:
 
-## Team division
-
-| # | Role | Current | Later owner |
-| --- | --- | --- | --- |
-| 1 | Project owner | **Foundation** (this) | Integration, final UI/polish, demo stability |
-| 2 | Developer | — | **Government workflow**: Challenge → Startup → Application → Evaluation → Selection |
-| 3 | Developer | — | **Trust core**: Protocol → Seal → Pilot → Evidence → Validation → Verdict |
-| 4 | Developer | — | **VPR/Reuse**: VPR → VPR library → Reuse assessment → Procurement support → AI → mock integrations |
-
-Each developer works independently on top of this foundation; the backend
-stays **one service** with logical modules.
-
-## Current status — FOUNDATION complete
-
-Working today:
-
-- Docker Compose starts exactly 4 services: `frontend`, `backend`,
-  `postgres`, `minio`.
-- FastAPI exposes `GET /` and `GET /health`; `/health` reports PostgreSQL
-  and MinIO reachability.
-- SQLAlchemy engine/session layer + declarative base exist; **no domain
-  tables yet**.
-- MinIO bucket `pramaan-evidence` is created at startup; storage config is
-  ready for evidence files.
-- React + TS (strict) + Tailwind page shows the PRAMAAN tagline, confirms
-  "Foundation build is running", and calls `/health` through the
-  centralized API client (`frontend/src/api/client.ts`).
-- Basic backend tests pass (`backend/tests/`).
-
-## What future developers will implement (not now)
-
-- **Person 2** — challenges, applications, startups, evaluations,
-  pilot-selection workflow. Backend: `backend/app/api|models|schemas|services`
-  under `/api/v1`; frontend pages under `frontend/src/pages`.
-- **Person 3** — protocol definition + sealing, pilot tracking, evidence
-  upload (MinIO) + SHA-256 hashing, integrity validation, deterministic
-  verdict. Trust logic in `backend/app/services`; storage via
-  `backend/app/storage.py`.
-- **Person 4** — VPR records + library, reuse assessment, procurement
-  support, optional AI via a local model (Ollama), mock integrations.
-  Adapters under `backend/app/` following the storage-adapter pattern.
-
-## Explicitly NOT implemented during foundation
-
-No challenges/startups/applications/evaluations/protocols/sealing/pilots/
-evidence/hash chains/validation/verdicts/VPR/reuse/procurement/AI/
-government integrations/authentication (no OAuth, login, passwords, RBAC,
-sessions). No microservices, Kubernetes, Kafka, blockchain, payments.
-No real government APIs and no production deployment.
-
-## For AI coding agents working in this repo
-
-1. Read this file first, then the relevant section of the codebase.
-2. Do not redesign the product or swap the stack (React+TS+Tailwind+Vite /
-   FastAPI / PostgreSQL / MinIO / Docker Compose).
-3. Backend rules: business logic goes in `services/`, not route handlers;
-   routers mount under `/api/v1` in `app/main.py`; models inherit
-   `app/db/base.Base` and use the `get_db` dependency; env config belongs in
-   `app/config.py` (never hardcode credentials).
-4. Frontend rules: no raw `fetch()` in components — extend
-   `frontend/src/api/client.ts`; shared UI lives in `frontend/src/components`;
-   pages in `frontend/src/pages`; strict TypeScript.
-5. Keep everything runnable with `docker compose up --build`; do not add
-   services or heavyweight infrastructure to the prototype.
-6. Mark demo scenario data explicitly as SIMULATED.
-7. Test framework: `backend/tests/` (pytest). Add tests with each module.
+1. Read CONTEXT.md.
+2. Inspect the current repository.
+3. Determine the current implementation phase.
+4. Respect team/module ownership.
+5. Do not redesign finalized architecture.
+6. Do not implement another developer's module.
+7. Do not add forbidden infrastructure.
+8. Do not assume future features are implemented.
+9. Keep changes focused.
+10. Preserve PRAMAAN's core trust principles.
